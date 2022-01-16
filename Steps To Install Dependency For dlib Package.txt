@@ -1,0 +1,32 @@
+Step 1 : Activate the virtual environment (reunite-env) of this project first
+Step 2 : Perform pip install cmake==3.22.1
+Step 3 : Only after completing the Step 2, perform pip install -r requirements.txt
+
+While performing Step 3, if you get below error then perform Step 4 onwards otherwise not required
+
+"
+You must use Visual Studio to build a python extension on windows. If you
+are getting this error it means you have not installed Visual C++. Note
+that there are many flavors of Visual Studio, like Visual Studio for C#
+development. You need to install Visual Studio for C++.
+"
+
+Step 4 : Download Build Tools for Visual Studio 2022 and install only one workload i.e., Desktop development with C++ under Workloads menu
+Step 5 : Restart the system and activate the virtual environment (reunite-env) of this project again
+Step 6 : Perform pip install -r requirements.txt
+
+While performing Step 6, if you get below error then perform Step 7 onwards otherwise not required
+
+"
+No CMAKE_C_COMPILER could be found.
+No CMAKE_CXX_COMPILER could be found.
+"
+
+Step 7 : Add the below mentioned absolute paths to the system PATH variable under Environment Variables
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.30.30705\bin\Hostx64\x64
+
+Step 8 : Restart Visual Studio Code and kill all the previous terminals in it
+Step 9 : Now, open a new terminal and activate the virtual environment (reunite-env) of this project again
+Step 10 : Perform pip install -r requirements.txt
